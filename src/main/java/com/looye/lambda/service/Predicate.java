@@ -1,4 +1,4 @@
-package main.java.com.looye.service;
+package main.java.com.looye.lambda.service;
 
 /**
  * Created by looye on 2017/12/9.

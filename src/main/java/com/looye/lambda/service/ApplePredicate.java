@@ -1,6 +1,6 @@
-package main.java.com.looye.service;
+package main.java.com.looye.lambda.service;
 
-import main.java.com.looye.bean.Apple;
+import main.java.com.looye.lambda.bean.Apple;
 
 /**
  * Created by looye on 2017/12/9.

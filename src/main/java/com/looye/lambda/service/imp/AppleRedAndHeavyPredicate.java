@@ -1,7 +1,7 @@
-package main.java.com.looye.service.imp;
+package main.java.com.looye.lambda.service.imp;
 
-import main.java.com.looye.bean.Apple;
-import main.java.com.looye.service.ApplePredicate;
+import main.java.com.looye.lambda.bean.Apple;
+import main.java.com.looye.lambda.service.ApplePredicate;
 
 /**
  * Created by looye on 2017/12/9.
