@@ -67,16 +67,16 @@ public class PastWay {
      * 通过颜色筛选苹果
      *
      * @param appleList
-     * @param coler
+     * @param color
      * @return
      */
-    private static List<Apple> filterApplesByColor(List<Apple> appleList, String coler) {
-        if (null == coler || coler.trim().length() == 0) {
+    private static List<Apple> filterApplesByColor(List<Apple> appleList, String color) {
+        if (null == color || color.trim().length() == 0) {
             return new ArrayList<>();
         }
         List<Apple> result = new ArrayList<>();
         for (Apple app : appleList) {
-            if (coler.equals(app.getColor())) {
+            if (color.equals(app.getColor())) {
                 result.add(app);
             }
         }

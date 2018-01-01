@@ -2,9 +2,12 @@ package main.java.com.looye.lambda.util;
 
 import main.java.com.looye.lambda.bean.Apple;
 import main.java.com.looye.lambda.service.ApplePredicate;
+import main.java.com.looye.lambda.service.Predicate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+import java.util.function.Consumer;
 
 /**
  * Created by looye on 2017/12/16.
@@ -14,8 +17,17 @@ import java.util.List;
  */
 public class AppleUtil {
 
+    public static void testMethod() {
+
+    }
+
+    public static void printApple(Apple apple, Consumer<Apple> consumer) {
+        consumer.accept(apple);
+    }
+
     public static List<Apple> generateList() {
         List<Apple> appleList = new ArrayList<>();
+        Random random = new Random();
         for (int i = 0; i < 20; i++) {
             Apple apple = new Apple();
             appleList.add(apple);
@@ -30,6 +42,7 @@ public class AppleUtil {
             }
             apple.setColor(color);
             apple.setWeight(i);
+            apple.setPrice(random.nextInt(10) * i);
         }
         return appleList;
     }

@@ -25,7 +25,7 @@ public class LambdaWay {
         List<Apple> yellowAndSamllApples = AppleUtil.filterApples(appleList, new ApplePredicate() {
             @Override
             public boolean test(Apple apple) {
-                return "yellow".equals(apple.getColor()) && apple.getWeight() < 15;
+                return "yellow".equals(apple.getColor()) && apple.getWeight() < (15);
             }
         });
         System.out.println("----yellowAndSamllApples----" + yellowAndSamllApples.size());
@@ -81,10 +81,28 @@ public class LambdaWay {
         };
 
         Comparator<Apple> comparator2 = (o1, o2) -> o1.getWeight() > o2.getWeight() ? 1 : 0;
-
+        //lambda
+        Runnable r1 = () -> System.out.println("Hello World!");
+        //匿名类
+        Runnable r2 = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Hello World!");
+            }
+        };
+        process(r1);
+        process(r2);
+        process(() -> System.out.println("Hello World!"));
     }
+
+    public static void process(Runnable r) {
+        r.run();
+    }
+
 
     public static boolean methodCode(Apple apple) {
         return "yellow".equals(apple.getColor()) && apple.getWeight() < 15;
     }
+
+
 }

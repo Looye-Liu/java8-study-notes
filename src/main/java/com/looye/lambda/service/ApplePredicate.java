@@ -8,6 +8,14 @@ import main.java.com.looye.lambda.bean.Apple;
  * @author looye
  * @date 2017/12/9
  */
+@FunctionalInterface
 public interface ApplePredicate {
     boolean test(Apple apple);
+
+    /**
+     * 测试
+     */
+    default void test() {
+        System.out.println("this is test interface");
+    }
 }

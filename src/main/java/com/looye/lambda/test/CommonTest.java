@@ -23,6 +23,6 @@ public class CommonTest {
         CommonUtil.forEach(greenApples, (Apple apple) -> apple.setDay(5));
 
         //获取苹果的颜色
-        List<Integer> collers = CommonUtil.map(greenApples, (Apple apple) -> apple.getWeight());
+        List<String> collers = CommonUtil.map(appleList, (Apple apple) -> apple.getColor());
     }
 }
