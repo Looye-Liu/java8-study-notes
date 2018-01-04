@@ -5,6 +5,7 @@ import main.java.com.looye.lambda.util.AppleUtil;
 import main.java.com.looye.lambda.util.CommonUtil;
 
 import java.util.List;
+import java.util.function.Function;
 
 /**
  * Created by looye on 2017/12/16.
@@ -24,5 +25,7 @@ public class CommonTest {
 
         //获取苹果的颜色
         List<String> collers = CommonUtil.map(appleList, (Apple apple) -> apple.getColor());
+
+        Function<String, String> function = (String s) -> "this" + s;
     }
 }
