@@ -3,8 +3,7 @@ package main.java.com.looye.stream.test;
 import main.java.com.looye.stream.bean.DishInfo;
 import main.java.com.looye.stream.util.DishUtil;
 
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -45,5 +44,7 @@ public class DemoOne {
         Stream<String> dishNameStream = lowPriceDishList.stream();
         dishNameStream.forEach(System.out::println);
         dishNameStream.forEach(System.out::println);
+
+        Map map = Collections.synchronizedMap(new HashMap<>());
     }
 }

@@ -18,4 +18,5 @@ public interface ApplePredicate {
     default void test() {
         System.out.println("this is test interface");
     }
+
 }
